@@ -1,0 +1,29 @@
+{
+  "name": "asmaa-lib",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || 17.x",
+    "react-dom": "^16.8.0 || 17.x",
+    "styled-components": "^5.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/asmaa-lib.umd.js",
+  "module": "./dist/asmaa-lib.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/asmaa-lib.es.js",
+      "require": "./dist/asmaa-lib.umd.js"
+    }
+  }
+}
